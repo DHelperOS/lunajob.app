@@ -33,22 +33,27 @@ export default function Navbar() {
 
     const navLinks = [
         { name: "안심 보장", id: "privacy" },
+        { name: "앱 둘러보기", id: "showcase" },
         { name: "이벤트", id: "events" },
         { name: "주요 기능", id: "features" },
+        { name: "커뮤니티", id: "community" },
+        { name: "신뢰도", id: "trust" },
+        { name: "AI 매칭", id: "ai-matching" },
+        { name: "멤버십", id: "pricing" },
     ];
 
     return (
         <nav
             className={cn(
-                "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-                isScrolled ? "bg-background/80 backdrop-blur-md py-4 border-b border-white/5" : "bg-transparent py-6"
+                "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
+                isScrolled ? "bg-background/40 backdrop-blur-2xl py-3 border-b border-white/5 shadow-2xl" : "bg-transparent py-5"
             )}
         >
             <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
                 {/* Logo */}
-                <Link href="/" className="text-2xl font-black tracking-tight text-foreground flex items-center gap-2">
-                    <Image src="/app_icon_info.webp" alt="Luna Alba Icon" width={32} height={32} className="rounded-full" />
-                    루나 알바
+                <Link href="/" className="text-xl font-black tracking-tight text-foreground flex items-center gap-2 font-logo">
+                    <Image src="/app_icon_info.webp" alt="Luna Alba Icon" width={28} height={28} className="object-contain" />
+                    루나알바
                 </Link>
 
                 {/* Desktop Nav */}
@@ -62,9 +67,7 @@ export default function Navbar() {
                             {link.name}
                         </button>
                     ))}
-                    <Button onClick={() => scrollToSection("register")} size="sm">
-                        사전예약 하기
-                    </Button>
+
 
                     {/* Theme Toggle */}
                     <button
@@ -100,7 +103,7 @@ export default function Navbar() {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "100vh" }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden absolute top-full left-0 right-0 bg-background border-t border-white/5 overflow-hidden"
+                        className="md:hidden absolute top-full left-0 right-0 bg-background/20 backdrop-blur-xl border-t border-white/10 overflow-hidden"
                     >
                         <div className="flex flex-col p-6 gap-6 items-center justify-center h-full pb-24">
                             {navLinks.map((link) => (
@@ -112,9 +115,7 @@ export default function Navbar() {
                                     {link.name}
                                 </button>
                             ))}
-                            <Button onClick={() => scrollToSection("register")} size="lg" className="w-full max-w-xs mt-4">
-                                사전예약 하기
-                            </Button>
+
                         </div>
                     </motion.div>
                 )}

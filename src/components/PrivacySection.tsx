@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function PrivacySection() {
     return (
-        <section id="privacy" className="py-24 bg-background relative overflow-hidden flex items-center justify-center transition-colors">
+        <section id="privacy" className="py-24 relative overflow-hidden flex items-center justify-center">
             <div className="container mx-auto px-4 relative z-10">
                 <div className="flex flex-col lg:flex-row items-center justify-between gap-16 max-w-6xl mx-auto">
                     {/* Left Text Content */}
@@ -14,10 +14,10 @@ export default function PrivacySection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5 }}
-                            className="text-4xl md:text-6xl font-black text-foreground leading-tight mb-6"
+                            className="text-4xl md:text-6xl font-black text-foreground leading-tight mb-6 break-keep"
                         >
-                            번호 없이 안전하게.<br />
-                            <span className="text-[#EC4899]">Safe Inquiry.</span>
+                            번호 없이 안전한 <span className="text-primary-violet">밤알바</span>.<br />
+                            <span className="text-[#EC4899]">Safe Night Job.</span>
                         </motion.h2>
 
                         <motion.div
@@ -38,13 +38,13 @@ export default function PrivacySection() {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: 0.2 }}
-                                className="flex items-center gap-4 p-5 rounded-2xl bg-card border border-border"
+                                className="flex items-center gap-4 p-5 rounded-2xl bg-white/60 dark:bg-black/40 border border-black/5 dark:border-white/15 backdrop-blur-md dark:backdrop-blur-none shadow-sm"
                             >
-                                <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center text-2xl">
+                                <div className="w-12 h-12 rounded-full bg-black/5 dark:bg-white/10 flex items-center justify-center text-2xl">
                                     🤫
                                 </div>
                                 <div>
-                                    <h4 className="text-foreground font-bold text-lg">No Phone Number</h4>
+                                    <h4 className="text-foreground font-bold text-lg break-keep">전화번호 미공개 밤알바</h4>
                                     <p className="text-sm text-muted-foreground">안심번호조차 필요 없는 완벽한 익명성</p>
                                 </div>
                             </motion.div>
@@ -55,13 +55,13 @@ export default function PrivacySection() {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: 0.3 }}
-                                className="flex items-center gap-4 p-5 rounded-2xl bg-card border border-border"
+                                className="flex items-center gap-4 p-5 rounded-2xl bg-white/60 dark:bg-black/40 border border-black/5 dark:border-white/15 backdrop-blur-md dark:backdrop-blur-none shadow-sm"
                             >
-                                <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center text-2xl">
+                                <div className="w-12 h-12 rounded-full bg-black/5 dark:bg-white/10 flex items-center justify-center text-2xl">
                                     👋
                                 </div>
                                 <div>
-                                    <h4 className="text-foreground font-bold text-lg">Poke Feature</h4>
+                                    <h4 className="text-foreground font-bold text-lg break-keep">밤알바 찔러보기 기능</h4>
                                     <p className="text-sm text-muted-foreground">부담 없이 '찔러보기'로 의사 표현</p>
                                 </div>
                             </motion.div>
@@ -92,20 +92,38 @@ export default function PrivacySection() {
                                 </div>
 
                                 {/* Chat 1 - Received */}
-                                <div className="bg-[#2D3748] p-4 rounded-2xl rounded-tl-none text-sm text-gray-200 leading-relaxed shadow-lg">
+                                <motion.div
+                                    initial={{ opacity: 0, x: -20, scale: 0.9 }}
+                                    whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.4, delay: 0.6 }}
+                                    className="bg-[#2D3748] p-4 rounded-2xl rounded-tl-none text-sm text-gray-200 leading-relaxed shadow-lg origin-bottom-left"
+                                >
                                     안녕하세요! 공고 보고 연락드립니다. 전화번호 미공개라 안심되네요.
-                                </div>
+                                </motion.div>
 
                                 {/* Chat 2 - Sent */}
-                                <div className="self-end bg-[#A855F7] p-4 rounded-2xl rounded-tr-none text-sm text-white leading-relaxed shadow-lg mt-2">
+                                <motion.div
+                                    initial={{ opacity: 0, x: 20, scale: 0.9 }}
+                                    whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.4, delay: 1.8 }}
+                                    className="self-end bg-[#A855F7] p-4 rounded-2xl rounded-tr-none text-sm text-white leading-relaxed shadow-lg mt-2 origin-bottom-right"
+                                >
                                     네 안녕하세요! 앱 내 채팅으로 편하게 면접 일정 조율 가능합니다.
-                                </div>
+                                </motion.div>
 
                                 {/* System Message */}
-                                <div className="bg-[#2D3748] p-3 rounded-lg self-start flex items-center gap-2 mt-4">
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20, scale: 0.8 }}
+                                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ type: "spring", stiffness: 200, damping: 10, delay: 2.5 }}
+                                    className="bg-[#2D3748] p-3 rounded-lg self-start flex items-center gap-2 mt-4"
+                                >
                                     <span className="text-xl">👋</span>
                                     <span className="text-[#F472B6] font-bold text-sm">찔러보기 도착!</span>
-                                </div>
+                                </motion.div>
 
                                 {/* Input Area Mock */}
                                 <div className="mt-auto mb-4">

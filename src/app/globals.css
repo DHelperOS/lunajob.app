@@ -1,48 +1,56 @@
 @import url('https://cdn.jsdelivr.net/gh/sun-typeface/SUITE@2/fonts/static/woff2/SUITE.css');
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer utilities {
+  .font-logo {
+    font-family: 'SUITE', sans-serif;
+  }
+}
+
 @layer base {
   :root {
-    --background: #ffffff;
-    --foreground: #171717;
-    --card: #ffffff;
-    --card-foreground: #171717;
-    --popover: #ffffff;
-    --popover-foreground: #171717;
-    --primary: #A855F7;
-    --primary-foreground: #ffffff;
-    --secondary: #f4f4f5;
-    --secondary-foreground: #171717;
-    --muted: #f4f4f5;
-    --muted-foreground: #737373;
-    --accent: #f4f4f5;
-    --accent-foreground: #171717;
-    --destructive: #ef4444;
-    --destructive-foreground: #ffffff;
-    --border: #e5e5e5;
-    --input: #e5e5e5;
-    --ring: #A855F7;
+    --background: #FDFEFE;
+    --foreground: #020617;
+    --card: #FFFFFF;
+    --card-foreground: #020617;
+    --popover: #FFFFFF;
+    --popover-foreground: #020617;
+    --primary: #9333EA;
+    --primary-foreground: #FFFFFF;
+    --secondary: #F8FAFC;
+    --secondary-foreground: #020617;
+    --muted: #F1F5F9;
+    --muted-foreground: #64748B;
+    --accent: #F5F3FF;
+    --accent-foreground: #6B21A8;
+    --destructive: #EF4444;
+    --destructive-foreground: #FFFFFF;
+    --border: #F1F5F9;
+    --input: #F1F5F9;
+    --ring: #9333EA;
   }
 
   .dark {
-    --background: #1A1B1E;
-    --foreground: #F0F0F0;
-    --card: #222327;
-    --card-foreground: #F0F0F0;
-    --popover: #222327;
-    --popover-foreground: #F0F0F0;
+    --background: #000000;
+    --foreground: #F8FAFC;
+    --card: #0A0C1A;
+    --card-foreground: #F8FAFC;
+    --popover: #0A0C1A;
+    --popover-foreground: #F8FAFC;
     --primary: #A855F7;
-    --primary-foreground: #ffffff;
-    --secondary: #27272a;
-    --secondary-foreground: #F0F0F0;
-    --muted: #27272a;
-    --muted-foreground: #A0A0A0;
-    --accent: #27272a;
-    --accent-foreground: #F0F0F0;
-    --destructive: #7f1d1d;
+    --primary-foreground: #FFFFFF;
+    --secondary: #12142B;
+    --secondary-foreground: #F8FAFC;
+    --muted: #12142B;
+    --muted-foreground: #94A3B8;
+    --accent: #1E1B4B;
+    --accent-foreground: #C084FC;
+    --destructive: #7F1D1D;
     --destructive-foreground: #FEF2F2;
-    --border: #27272a;
-    --input: #27272a;
+    --border: #1E293B;
+    --input: #1E293B;
     --ring: #A855F7;
   }
 }
@@ -85,11 +93,15 @@
   --font-suite: 'SUITE', sans-serif;
 }
 
+html,
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: transparent;
   font-family: var(--font-suite);
   overflow-x: hidden;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Custom Scrollbar */

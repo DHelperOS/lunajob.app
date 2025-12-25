@@ -3,13 +3,13 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
-import { Smartphone, Monitor, Apple, Terminal, ShoppingBag } from "lucide-react"; // ShoppingBag for ONE Store
+import { Smartphone, Monitor, Apple, Terminal } from "lucide-react";
 
 export default function Hero() {
     const [dDay, setDDay] = useState("");
 
     useEffect(() => {
-        const targetDate = new Date("2025-01-01T00:00:00");
+        const targetDate = new Date("2026-01-12T00:00:00");
         const now = new Date();
         const diff = targetDate.getTime() - now.getTime();
         const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
@@ -23,63 +23,56 @@ export default function Hero() {
         }
     }, []);
     return (
-        <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-            {/* Background Elements */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[800px] bg-primary-violet/10 blur-[120px] rounded-full pointer-events-none" />
-            <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-primary-pink/10 blur-[100px] rounded-full pointer-events-none" />
-
+        <section id="hero" className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
             <div className="container mx-auto px-4 z-10 flex flex-col items-center text-center">
-
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    className="mb-6"
-                >
-                    <span className="inline-block px-4 py-1.5 rounded-full border border-primary-violet/30 bg-primary-violet/10 text-primary-pink font-bold text-sm mb-6 animate-pulse">
-                        🚀 그랜드 오프닝: {dDay || "Coming Soon"}
-                    </span>
-                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-foreground mb-6 leading-[1.1]">
-                        Anywhere, <br />
-                        <span className="text-transparent bg-clip-text bg-hero-gradient">Anytime.</span>
-                    </h1>
-                    <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-                        PC와 모바일, 웹과 앱 어디서든 완벽하게.<br className="hidden md:block" />
-                        당신의 프라이버시를 지키는 프리미엄 구인구직 플랫폼, <span className="text-foreground font-bold">루나 알바</span>
-                    </p>
-                </motion.div>
 
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                    className="flex flex-col sm:flex-row gap-3 w-full justify-center flex-wrap px-4"
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    className="mb-12"
                 >
-                    <Button size="lg" className="w-full sm:w-auto gap-2 min-w-[180px]" variant="outline">
-                        <Monitor size={20} /> PC Web
-                    </Button>
-                    <Button size="lg" className="w-full sm:w-auto gap-2 min-w-[180px]">
-                        <Smartphone size={20} /> 사전예약 참여
-                    </Button>
+                    <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary-violet/20 bg-primary-violet/10 text-primary-violet font-bold text-sm mb-10 animate-pulse backdrop-blur-md">
+                        <span className="relative flex h-2 w-2">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-pink opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-primary-pink"></span>
+                        </span>
+                        그랜드 오프닝: {dDay || "Coming Soon"}
+                    </span>
+                    <h1 className="text-5xl md:text-7xl lg:text-[8rem] font-black tracking-tighter text-foreground mb-8 leading-[1.1] break-keep">
+                        당신이 <span className="text-transparent bg-clip-text bg-hero-gradient font-logo inline-block">빛나는</span><br />
+                        밤알바, <span className="text-transparent bg-clip-text bg-hero-gradient font-logo inline-block">루나알바.</span>
+                    </h1>
+                    <p className="text-xl md:text-2xl text-muted-foreground/80 max-w-3xl mx-auto mb-12 leading-relaxed font-medium">
+                        PC와 모바일, 웹과 앱 어디서든 완벽하게.<br className="hidden md:block" />
+                        당신의 프라이버시를 지키는 프리미엄 <span className="font-bold">밤알바</span> 플랫폼, <span className="text-foreground border-b-2 border-primary-violet/30 font-logo">루나알바</span>
+                    </p>
                 </motion.div>
 
-                {/* Store Badges Link Placeholders */}
                 <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.3 }}
-                    className="mt-8 flex gap-4 justify-center"
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8, delay: 0.4 }}
+                    className="p-8 rounded-[2.5rem] bg-white/80 dark:bg-black/40 border border-black/5 dark:border-white/10 shadow-2xl backdrop-blur-xl dark:backdrop-blur-none flex flex-wrap gap-6 justify-center items-center"
                 >
-                    {/* Store Badges - Using User Provided PNGs */}
-                    <button className="hover:opacity-80 transition-opacity">
-                        <img src="/앱스토어-02.png" alt="App Store" className="h-14 w-auto" />
-                    </button>
-                    <button className="hover:opacity-80 transition-opacity">
-                        <img src="/구글플레이.png" alt="Google Play" className="h-14 w-auto" />
-                    </button>
-                    <button className="hover:opacity-80 transition-opacity">
-                        <img src="/onestore-badge.svg" alt="ONE Store" className="h-14 w-auto" />
-                    </button>
+                    {/* Store Badges - Simplified and removed clipping elements */}
+                    <a href="https://apps.apple.com/app/id6756914273" target="_blank" rel="noopener noreferrer" className="hover:scale-105 active:scale-95 transition-all dark:invert-0 light:brightness-95 hover:drop-shadow-[0_0_20px_rgba(139,92,246,0.3)]">
+                        <img src="/앱스토어-02.png" alt="App Store" className="h-[52px] w-auto" />
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=app.lunajob" target="_blank" rel="noopener noreferrer" className="hover:scale-105 active:scale-95 transition-all dark:invert-0 light:brightness-95 hover:drop-shadow-[0_0_20px_rgba(139,92,246,0.3)]">
+                        <img src="/구글플레이.png" alt="Google Play" className="h-[52px] w-auto" />
+                    </a>
+
+                    <div className="hidden sm:block w-px h-10 bg-border/50 mx-2" />
+
+                    {/* PC Web stylized as Badge - Positioned to the right */}
+                    <a href="https://luna-job.com" target="_blank" rel="noopener noreferrer" className="h-[52px] px-8 rounded-xl bg-foreground text-background border border-border flex items-center gap-3 hover:scale-105 active:scale-95 transition-all shadow-xl group">
+                        <Monitor size={22} className="group-hover:rotate-12 transition-transform" />
+                        <div className="flex flex-col items-start leading-none">
+                            <span className="text-[9px] opacity-70 mb-0.5 font-bold uppercase tracking-[0.2em]">Platform</span>
+                            <span className="text-lg font-bold tracking-tight">PC 웹사이트</span>
+                        </div>
+                    </a>
                 </motion.div>
 
 
