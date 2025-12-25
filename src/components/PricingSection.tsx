@@ -79,7 +79,7 @@ export default function PricingSection() {
     const totalRate = selectedPlan.rate + selectedDuration.bonusRate;
 
     return (
-        <section id="pricing" className="py-24 relative overflow-hidden">
+        <section id="pricing" className="py-24 relative overflow-hidden" aria-labelledby="pricing-heading">
             {/* Decorative Background Elements */}
             <div className="absolute top-[20%] right-[10%] w-[500px] h-[500px] bg-primary-violet/5 rounded-full blur-[120px] pointer-events-none" />
             <div className="absolute bottom-[10%] left-[5%] w-[400px] h-[400px] bg-primary-pink/5 rounded-full blur-[100px] pointer-events-none" />
@@ -95,8 +95,8 @@ export default function PricingSection() {
                             transition={{ duration: 0.6 }}
                         >
                             <span className="text-primary-violet font-bold tracking-widest text-sm uppercase mb-3 block">Membership Plans</span>
-                            <h3 className="text-3xl md:text-5xl font-black text-foreground">루나 밤알바 플랜</h3>
-                            <p className="text-muted-foreground mt-6 text-lg">합리적인 가격으로 최상의 효과를 경험하세요.</p>
+                            <h2 id="pricing-heading" className="text-3xl md:text-5xl font-black text-foreground">루나 밤알바 플랜</h2>
+                            <p className="text-muted-foreground mt-6 text-lg"><strong>야간알바</strong>, <strong>여성알바</strong>를 위한 합리적인 가격으로 최상의 효과를 경험하세요.</p>
                         </motion.div>
                     </div>
 

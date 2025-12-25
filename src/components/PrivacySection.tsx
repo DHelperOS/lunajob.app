@@ -4,12 +4,13 @@ import { motion } from "framer-motion";
 
 export default function PrivacySection() {
     return (
-        <section id="privacy" className="py-24 relative overflow-hidden flex items-center justify-center">
+        <section id="privacy" className="py-24 relative overflow-hidden flex items-center justify-center" aria-labelledby="privacy-heading">
             <div className="container mx-auto px-4 relative z-10">
                 <div className="flex flex-col lg:flex-row items-center justify-between gap-16 max-w-6xl mx-auto">
                     {/* Left Text Content */}
                     <div className="flex-1 text-left">
                         <motion.h2
+                            id="privacy-heading"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -19,6 +20,7 @@ export default function PrivacySection() {
                             번호 없이 안전한 <span className="text-primary-violet">밤알바</span>.<br />
                             <span className="text-[#EC4899]">Safe Night Job.</span>
                         </motion.h2>
+                        <p className="sr-only">여성알바, 야간알바, 여자알바를 위한 안전한 프라이버시 보호 시스템</p>
 
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}

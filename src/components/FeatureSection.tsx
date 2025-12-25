@@ -26,15 +26,15 @@ const features = [
 
 export default function FeatureSection() {
     return (
-        <section id="features" className="py-24 relative">
+        <section id="features" className="py-24 relative" aria-labelledby="features-heading">
             <div className="container mx-auto px-4">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-5xl font-black text-foreground mb-4 font-logo break-keep">Why 밤알바는 루나알바?</h2>
+                <header className="text-center mb-16">
+                    <h2 id="features-heading" className="text-3xl md:text-5xl font-black text-foreground mb-4 font-logo break-keep">Why 밤알바는 루나알바?</h2>
                     <p className="text-muted-foreground max-w-2xl mx-auto">
-                        기존 알바 앱의 불편함은 이제 그만. <br />
-                        <span className="font-logo">루나알바</span>가 제안하는 새로운 구인구직의 기준.
+                        기존 <strong>야간알바</strong> 앱의 불편함은 이제 그만. <br />
+                        <span className="font-logo">루나알바</span>가 제안하는 새로운 <strong>여성알바</strong> 구인구직의 기준.
                     </p>
-                </div>
+                </header>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {features.map((feature, index) => (

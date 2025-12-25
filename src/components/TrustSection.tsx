@@ -5,7 +5,7 @@ import { ShieldCheck, UserCheck, Briefcase, Award, CheckCircle2 } from "lucide-r
 
 export default function TrustSection() {
     return (
-        <section id="trust" className="py-24 relative overflow-hidden bg-gradient-to-b from-background to-secondary/20">
+        <section id="trust" className="py-24 relative overflow-hidden bg-gradient-to-b from-background to-secondary/20" aria-labelledby="trust-heading">
             {/* Decorative Elements */}
             <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary-violet/5 rounded-full blur-[100px] pointer-events-none -translate-y-1/2 translate-x-1/2" />
 
@@ -22,14 +22,16 @@ export default function TrustSection() {
                         Trust System
                     </motion.span>
                     <motion.h2
+                        id="trust-heading"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
                         className="text-3xl md:text-5xl font-black text-foreground mb-6 break-keep"
                     >
-                        밤알바, 프로필 사진만<br />보고 믿을 수 있나요?
+                        <strong>밤알바</strong>, 프로필 사진만<br />보고 믿을 수 있나요?
                     </motion.h2>
+                    <p className="sr-only">안전한 여성알바, 야간알바를 위한 신뢰도 검증 시스템</p>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}

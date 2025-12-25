@@ -5,7 +5,7 @@ import { Sparkles, Brain, HandMetal, Clock, MapPin, Coins, Calendar, CheckCircle
 
 export default function AiMatchingSection() {
     return (
-        <section id="ai-matching" className="py-24 relative overflow-hidden bg-black/5 dark:bg-black/40">
+        <section id="ai-matching" className="py-24 relative overflow-hidden bg-black/5 dark:bg-black/40" aria-labelledby="ai-matching-heading">
             {/* Background Neural Network Effect */}
             <div className="absolute inset-0 opacity-10 pointer-events-none">
                 <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-violet/20 via-transparent to-transparent" />
@@ -25,15 +25,17 @@ export default function AiMatchingSection() {
                     </motion.div>
 
                     <motion.h2
+                        id="ai-matching-heading"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
                         className="text-3xl md:text-5xl font-black text-foreground mb-6"
                     >
-                        나한테 딱 맞는 밤알바,<br />
+                        나한테 딱 맞는 <strong>밤알바</strong>,<br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-primary-violet">AI가 찾아줄게요.</span>
                     </motion.h2>
+                    <p className="sr-only">AI 기반 여성알바, 야간알바, 여자알바 매칭 시스템</p>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}

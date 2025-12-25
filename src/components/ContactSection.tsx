@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function ContactSection() {
     return (
-        <section id="contact" className="py-24 relative overflow-hidden bg-background">
+        <section id="contact" className="py-24 relative overflow-hidden bg-background" aria-labelledby="contact-heading">
             <div className="container mx-auto px-4 relative z-10">
                 <div className="text-center mb-16">
                     <motion.span
@@ -18,6 +18,7 @@ export default function ContactSection() {
                         Contact Us
                     </motion.span>
                     <motion.h2
+                        id="contact-heading"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -26,6 +27,7 @@ export default function ContactSection() {
                     >
                         무엇을 도와드릴까요?
                     </motion.h2>
+                    <p className="sr-only">루나알바 밤알바, 여성알바 문의 및 고객센터</p>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}

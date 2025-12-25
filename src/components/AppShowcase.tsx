@@ -4,19 +4,19 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const marketImages = [
-    "/1.png",
-    "/2.png",
-    "/3.png",
-    "/4.png",
-    "/5.png",
-    "/6.png",
-    "/7.png",
-    "/8.png",
+    { src: "/1.png", alt: "루나알바 밤알바 앱 메인 화면 - 야간알바 구인구직" },
+    { src: "/2.png", alt: "루나알바 여성알바 구직자 프로필 화면" },
+    { src: "/3.png", alt: "루나알바 밤알바 공고 목록 - 여자알바 채용정보" },
+    { src: "/4.png", alt: "루나알바 AI 매칭 시스템 - 맞춤형 야간알바 추천" },
+    { src: "/5.png", alt: "루나알바 1:1 채팅 - 안전한 밤알바 소통" },
+    { src: "/6.png", alt: "루나알바 커뮤니티 - 여성알바 정보 공유" },
+    { src: "/7.png", alt: "루나알바 신뢰도 시스템 - 검증된 밤알바 플랫폼" },
+    { src: "/8.png", alt: "루나알바 요금제 선택 - 야간알바 프리미엄 서비스" },
 ];
 
 export default function AppShowcase() {
     return (
-        <section id="showcase" className="py-24 bg-transparent overflow-hidden">
+        <section id="showcase" className="py-24 bg-transparent overflow-hidden" aria-labelledby="showcase-heading">
             <div className="container mx-auto px-4 mb-12 text-center">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -24,12 +24,12 @@ export default function AppShowcase() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2 className="text-3xl md:text-5xl font-black text-foreground mb-4 font-logo break-keep">
-                        밤알바 필수 앱, 루나알바 둘러보기
+                    <h2 id="showcase-heading" className="text-3xl md:text-5xl font-black text-foreground mb-4 font-logo break-keep">
+                        <strong>밤알바</strong> 필수 앱, 루나알바 둘러보기
                     </h2>
                     <p className="text-muted-foreground max-w-2xl mx-auto">
-                        심플하고 직관적인 UI로 경험하는 프리미엄 구인구직.<br />
-                        당신에게 딱 맞는 알바를 가장 빠르고 안전하게 찾아보세요.
+                        심플하고 직관적인 UI로 경험하는 프리미엄 <strong>야간알바</strong> 구인구직.<br />
+                        당신에게 딱 맞는 <strong>여성알바</strong>를 가장 빠르고 안전하게 찾아보세요.
                     </p>
                 </motion.div>
             </div>
@@ -51,7 +51,7 @@ export default function AppShowcase() {
                     style={{ width: "max-content" }}
                 >
                     {/* Double the images for seamless loop */}
-                    {[...marketImages, ...marketImages].map((src, index) => (
+                    {[...marketImages, ...marketImages].map((image, index) => (
                         <div
                             key={index}
                             className="relative w-[280px] md:w-[340px] aspect-[9/19.5] rounded-[3.5rem] overflow-hidden border-[10px] border-secondary bg-black shadow-[0_40px_80px_-20px_rgba(0,0,0,0.4)] group hover:scale-[1.03] transition-all duration-700 hover:shadow-[0_60px_100px_-20px_rgba(139,92,246,0.3)]"
@@ -61,8 +61,8 @@ export default function AppShowcase() {
 
                             <div className="relative w-full h-full rounded-[2.8rem] overflow-hidden bg-card">
                                 <Image
-                                    src={src}
-                                    alt={`App Screen ${index + 1}`}
+                                    src={image.src}
+                                    alt={image.alt}
                                     fill
                                     className="object-cover group-hover:scale-110 transition-transform duration-[2s]"
                                     sizes="(max-width: 768px) 280px, 340px"

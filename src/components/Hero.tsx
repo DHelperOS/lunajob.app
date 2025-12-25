@@ -23,7 +23,7 @@ export default function Hero() {
         }
     }, []);
     return (
-        <section id="hero" className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <section id="hero" className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden" aria-labelledby="hero-heading">
             <div className="container mx-auto px-4 z-10 flex flex-col items-center text-center">
 
                 <motion.div
@@ -39,10 +39,11 @@ export default function Hero() {
                         </span>
                         그랜드 오프닝: {dDay || "Coming Soon"}
                     </span>
-                    <h1 className="text-5xl md:text-7xl lg:text-[8rem] font-black tracking-tighter text-foreground mb-8 leading-[1.1] break-keep">
+                    <h1 id="hero-heading" className="text-5xl md:text-7xl lg:text-[8rem] font-black tracking-tighter text-foreground mb-8 leading-[1.1] break-keep">
                         당신이 <span className="text-transparent bg-clip-text bg-hero-gradient font-logo inline-block">빛나는</span><br />
-                        밤알바, <span className="text-transparent bg-clip-text bg-hero-gradient font-logo inline-block">루나알바.</span>
+                        <span className="font-bold">밤알바</span>, <span className="text-transparent bg-clip-text bg-hero-gradient font-logo inline-block">루나알바</span>
                     </h1>
+                    <p className="sr-only">루나알바 - 밤알바, 야간알바, 여성알바, 여자알바 전문 구인구직 플랫폼. 퀸알바, 온니잡, 레이디알바, 여우알바보다 안전한 선택.</p>
                     <p className="text-xl md:text-2xl text-muted-foreground/80 max-w-3xl mx-auto mb-12 leading-relaxed font-medium">
                         PC와 모바일, 웹과 앱 어디서든 완벽하게.<br className="hidden md:block" />
                         당신의 프라이버시를 지키는 프리미엄 <span className="font-bold">밤알바</span> 플랫폼, <span className="text-foreground border-b-2 border-primary-violet/30 font-logo">루나알바</span>
@@ -56,11 +57,11 @@ export default function Hero() {
                     className="p-8 rounded-[2.5rem] bg-white/80 dark:bg-black/40 border border-black/5 dark:border-white/10 shadow-2xl backdrop-blur-xl dark:backdrop-blur-none flex flex-wrap gap-6 justify-center items-center"
                 >
                     {/* Store Badges - Simplified and removed clipping elements */}
-                    <a href="https://apps.apple.com/app/id6756914273" target="_blank" rel="noopener noreferrer" className="hover:scale-105 active:scale-95 transition-all dark:invert-0 light:brightness-95 hover:drop-shadow-[0_0_20px_rgba(139,92,246,0.3)]">
-                        <img src="/앱스토어-02.png" alt="App Store" className="h-[52px] w-auto" />
+                    <a href="https://apps.apple.com/app/id6756914273" target="_blank" rel="noopener noreferrer" className="hover:scale-105 active:scale-95 transition-all dark:invert-0 light:brightness-95 hover:drop-shadow-[0_0_20px_rgba(139,92,246,0.3)]" aria-label="App Store에서 루나알바 밤알바 앱 다운로드">
+                        <img src="/앱스토어-02.png" alt="App Store에서 루나알바 iOS 앱 다운로드 - 여성 밤알바 야간알바 플랫폼" className="h-[52px] w-auto" />
                     </a>
-                    <a href="https://play.google.com/store/apps/details?id=app.lunajob" target="_blank" rel="noopener noreferrer" className="hover:scale-105 active:scale-95 transition-all dark:invert-0 light:brightness-95 hover:drop-shadow-[0_0_20px_rgba(139,92,246,0.3)]">
-                        <img src="/구글플레이.png" alt="Google Play" className="h-[52px] w-auto" />
+                    <a href="https://play.google.com/store/apps/details?id=app.lunajob" target="_blank" rel="noopener noreferrer" className="hover:scale-105 active:scale-95 transition-all dark:invert-0 light:brightness-95 hover:drop-shadow-[0_0_20px_rgba(139,92,246,0.3)]" aria-label="Google Play에서 루나알바 밤알바 앱 다운로드">
+                        <img src="/구글플레이.png" alt="Google Play에서 루나알바 Android 앱 다운로드 - 안전한 여성알바 여자알바" className="h-[52px] w-auto" />
                     </a>
 
                     <div className="hidden sm:block w-px h-10 bg-border/50 mx-2" />

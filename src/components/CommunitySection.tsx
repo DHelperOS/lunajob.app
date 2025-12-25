@@ -5,7 +5,7 @@ import { MessageCircle, Sparkles, ShoppingBag, Star, MapPin, Ghost, Heart } from
 
 export default function CommunitySection() {
     return (
-        <section id="community" className="py-24 relative overflow-hidden">
+        <section id="community" className="py-24 relative overflow-hidden" aria-labelledby="community-heading">
             {/* Background Accents */}
             <div className="absolute top-[10%] left-[20%] w-[600px] h-[600px] bg-primary-pink/5 rounded-full blur-[120px] pointer-events-none" />
             <div className="absolute bottom-[20%] right-[10%] w-[500px] h-[500px] bg-primary-violet/5 rounded-full blur-[120px] pointer-events-none" />
@@ -23,13 +23,14 @@ export default function CommunitySection() {
                         루나알바 커뮤니티
                     </motion.span>
                     <motion.h2
+                        id="community-heading"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
                         className="text-3xl md:text-5xl font-black text-foreground mb-6 break-keep"
                     >
-                        밤알바를 함께하는 우리들의 이야기
+                        <strong>밤알바</strong>를 함께하는 우리들의 이야기
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
