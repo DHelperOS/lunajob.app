@@ -1,0 +1,27 @@
+{
+  "redirects": [
+    {
+      "source": "/post/:id",
+      "destination": "/redirect.html?type=post&id=:id",
+      "permanent": false
+    },
+    {
+      "source": "/community/alba-talk/:id",
+      "destination": "/redirect.html?type=alba-talk&id=:id",
+      "permanent": false
+    },
+    {
+      "source": "/community/second-hand/:id",
+      "destination": "/redirect.html?type=second-hand&id=:id",
+      "permanent": false
+    }
+  ],
+  "headers": [
+    {
+      "source": "/.well-known/apple-app-site-association",
+      "headers": [
+        { "key": "Content-Type", "value": "application/json" }
+      ]
+    }
+  ]
+}

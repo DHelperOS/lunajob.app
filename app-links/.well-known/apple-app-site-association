@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "ATU27G6H5V.app.lunajob",
+        "paths": [
+          "/post/*",
+          "/community/alba-talk/*",
+          "/community/second-hand/*"
+        ]
+      }
+    ]
+  }
+}
