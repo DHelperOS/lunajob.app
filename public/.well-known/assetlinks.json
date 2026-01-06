@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "app.lunajob",
+      "sha256_cert_fingerprints": [
+        "12:AB:73:54:B1:7F:8C:DD:A4:32:E1:55:03:98:D9:EF:B9:4D:23:0B:77:D9:A3:E1:34:51:DA:77:8D:08:91:55"
+      ]
+    }
+  }
+]
