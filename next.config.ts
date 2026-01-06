@@ -11,6 +11,25 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: "/post/:id",
+        destination: "/redirect.html?type=post&id=:id",
+        permanent: false,
+      },
+      {
+        source: "/community/alba-talk/:id",
+        destination: "/redirect.html?type=alba-talk&id=:id",
+        permanent: false,
+      },
+      {
+        source: "/community/second-hand/:id",
+        destination: "/redirect.html?type=second-hand&id=:id",
+        permanent: false,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
