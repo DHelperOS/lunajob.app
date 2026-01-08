@@ -2,107 +2,199 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>이메일 인증 - 루나알바</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>이메일 인증 - 루나잡</title>
+  <meta name="description" content="루나잡 이메일 인증 페이지">
+  <meta name="theme-color" content="#7033FF">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: linear-gradient(135deg, #7033FF 0%, #9B6DFF 100%);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: linear-gradient(160deg, #7033FF 0%, #5B21B6 50%, #4C1D95 100%);
       min-height: 100vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       padding: 20px;
     }
-    .container {
+    .card {
       background: white;
-      border-radius: 24px;
-      padding: 40px 30px;
+      border-radius: 28px;
+      padding: 48px 32px 40px;
       text-align: center;
-      max-width: 360px;
+      max-width: 380px;
       width: 100%;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      box-shadow: 0 25px 80px rgba(0,0,0,0.35), 0 10px 30px rgba(112, 51, 255, 0.2);
     }
-    .logo {
-      width: 80px;
-      height: 80px;
-      background: linear-gradient(135deg, #7033FF, #9B6DFF);
-      border-radius: 20px;
-      margin: 0 auto 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 36px;
+    .app-icon {
+      width: 88px;
+      height: 88px;
+      border-radius: 22px;
+      margin: 0 auto 20px;
+      box-shadow: 0 8px 24px rgba(112, 51, 255, 0.3);
+    }
+    .brand {
+      font-size: 13px;
+      font-weight: 600;
+      color: #7033FF;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
     }
     h1 {
-      font-size: 24px;
+      font-size: 26px;
+      font-weight: 700;
       color: #1a1a1a;
       margin-bottom: 12px;
     }
-    p {
+    .description {
       color: #666;
       font-size: 15px;
-      line-height: 1.5;
+      line-height: 1.6;
       margin-bottom: 32px;
     }
     .btn {
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
       width: 100%;
-      padding: 16px;
-      border-radius: 12px;
+      padding: 16px 24px;
+      border-radius: 14px;
       font-size: 16px;
       font-weight: 600;
       text-decoration: none;
-      margin-bottom: 12px;
-      transition: transform 0.2s;
+      transition: all 0.2s ease;
       cursor: pointer;
       border: none;
     }
     .btn:active { transform: scale(0.98); }
     .btn-primary {
-      background: linear-gradient(135deg, #7033FF, #9B6DFF);
+      background: linear-gradient(135deg, #7033FF 0%, #9B6DFF 100%);
       color: white;
+      box-shadow: 0 4px 16px rgba(112, 51, 255, 0.4);
     }
-    .loading {
-      color: #999;
-      font-size: 14px;
-      margin-top: 20px;
+    .btn-primary:hover {
+      box-shadow: 0 6px 20px rgba(112, 51, 255, 0.5);
+    }
+    .btn-icon {
+      width: 20px;
+      height: 20px;
+    }
+    .loading-section {
+      margin-bottom: 24px;
     }
     .spinner {
-      width: 24px;
-      height: 24px;
-      border: 3px solid #f3f3f3;
+      width: 32px;
+      height: 32px;
+      border: 3px solid #f0e6ff;
       border-top: 3px solid #7033FF;
       border-radius: 50%;
-      animation: spin 1s linear infinite;
-      margin: 0 auto 12px;
+      animation: spin 0.8s linear infinite;
+      margin: 0 auto 16px;
     }
     @keyframes spin {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
+    .status-text {
+      color: #888;
+      font-size: 14px;
+    }
+    .divider {
+      display: flex;
+      align-items: center;
+      margin: 24px 0;
+      color: #ccc;
+      font-size: 13px;
+    }
+    .divider::before, .divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: #eee;
+    }
+    .divider::before { margin-right: 16px; }
+    .divider::after { margin-left: 16px; }
+    .store-links {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+    }
+    .store-btn {
+      flex: 1;
+      padding: 12px 16px;
+      border-radius: 12px;
+      background: #f5f5f5;
+      color: #333;
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .store-btn:hover {
+      background: #eee;
+    }
+    .footer {
+      margin-top: 32px;
+      text-align: center;
+    }
+    .footer-text {
+      color: rgba(255,255,255,0.7);
+      font-size: 13px;
+    }
+    .footer-link {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .hidden { display: none !important; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="logo">🌙</div>
+  <div class="card">
+    <img src="/favicon.png" alt="루나잡" class="app-icon">
+    <div class="brand">LunaJob</div>
     <h1>이메일 인증</h1>
-    <p id="message">앱으로 이동 중입니다...</p>
-    <div class="spinner" id="spinner"></div>
+    <p class="description" id="message">루나잡 앱으로 이동하고 있습니다.<br>잠시만 기다려주세요.</p>
 
-    <button id="openAppBtn" class="btn btn-primary" style="display: none;">앱에서 열기</button>
+    <div class="loading-section" id="loadingSection">
+      <div class="spinner"></div>
+      <p class="status-text">앱을 여는 중...</p>
+    </div>
 
-    <p class="loading" id="status"></p>
+    <button id="openAppBtn" class="btn btn-primary hidden">
+      <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+        <polyline points="15 3 21 3 21 9"></polyline>
+        <line x1="10" y1="14" x2="21" y2="3"></line>
+      </svg>
+      루나잡 앱에서 열기
+    </button>
+
+    <div id="storeSection" class="hidden">
+      <div class="divider">앱이 설치되어 있지 않나요?</div>
+      <div class="store-links">
+        <a href="https://apps.apple.com/app/id6740517498" class="store-btn">App Store</a>
+        <a href="https://play.google.com/store/apps/details?id=app.lunajob" class="store-btn">Google Play</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p class="footer-text">
+      <a href="https://lunajob.app" class="footer-link">lunajob.app</a>
+    </p>
   </div>
 
   <script>
-    // Supabase 인증 파라미터 추출
     const hash = window.location.hash.substring(1);
     const search = window.location.search.substring(1);
     const params = new URLSearchParams(hash || search);
 
-    // 토큰 또는 코드 추출
     const accessToken = params.get('access_token');
     const refreshToken = params.get('refresh_token');
     const code = params.get('code');
@@ -110,47 +202,38 @@
     const error = params.get('error');
     const errorDescription = params.get('error_description');
 
-    // 딥링크 스킴
     const DEEP_LINK_SCHEME = 'io.supabase.lunaalba';
-
-    // 딥링크 URL 생성
     let deepLink = `${DEEP_LINK_SCHEME}://email-confirm`;
 
     if (error) {
       deepLink += `?error=${encodeURIComponent(error)}&error_description=${encodeURIComponent(errorDescription || '')}`;
     } else if (code) {
-      // PKCE 흐름
       deepLink += `?code=${encodeURIComponent(code)}`;
       if (type) deepLink += `&type=${encodeURIComponent(type)}`;
     } else if (accessToken) {
-      // Implicit 흐름
       deepLink += `?access_token=${encodeURIComponent(accessToken)}`;
       if (refreshToken) deepLink += `&refresh_token=${encodeURIComponent(refreshToken)}`;
       if (type) deepLink += `&type=${encodeURIComponent(type)}`;
     }
 
     const messageEl = document.getElementById('message');
-    const statusEl = document.getElementById('status');
-    const spinnerEl = document.getElementById('spinner');
+    const loadingSection = document.getElementById('loadingSection');
     const openAppBtn = document.getElementById('openAppBtn');
+    const storeSection = document.getElementById('storeSection');
 
     function openApp() {
       window.location.href = deepLink;
     }
 
-    // 버튼 클릭 이벤트
     openAppBtn.onclick = openApp;
-
-    // 자동으로 앱 열기 시도
     openApp();
 
-    // 2초 후에도 페이지에 있으면 버튼 표시
     setTimeout(() => {
-      spinnerEl.style.display = 'none';
-      messageEl.textContent = '앱이 열리지 않았나요?';
-      openAppBtn.style.display = 'block';
-      statusEl.textContent = '버튼을 눌러 앱에서 인증을 완료하세요';
-    }, 2000);
+      loadingSection.classList.add('hidden');
+      messageEl.innerHTML = '앱이 자동으로 열리지 않았나요?<br>아래 버튼을 눌러주세요.';
+      openAppBtn.classList.remove('hidden');
+      storeSection.classList.remove('hidden');
+    }, 2500);
   </script>
 </body>
 </html>
