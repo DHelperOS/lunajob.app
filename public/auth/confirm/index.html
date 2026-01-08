@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이메일 인증 - 루나알바</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #7033FF 0%, #9B6DFF 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .container {
+      background: white;
+      border-radius: 24px;
+      padding: 40px 30px;
+      text-align: center;
+      max-width: 360px;
+      width: 100%;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+    .logo {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #7033FF, #9B6DFF);
+      border-radius: 20px;
+      margin: 0 auto 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+    }
+    h1 {
+      font-size: 24px;
+      color: #1a1a1a;
+      margin-bottom: 12px;
+    }
+    p {
+      color: #666;
+      font-size: 15px;
+      line-height: 1.5;
+      margin-bottom: 32px;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 16px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      margin-bottom: 12px;
+      transition: transform 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+    .btn:active { transform: scale(0.98); }
+    .btn-primary {
+      background: linear-gradient(135deg, #7033FF, #9B6DFF);
+      color: white;
+    }
+    .loading {
+      color: #999;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+    .spinner {
+      width: 24px;
+      height: 24px;
+      border: 3px solid #f3f3f3;
+      border-top: 3px solid #7033FF;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 12px;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">🌙</div>
+    <h1>이메일 인증</h1>
+    <p id="message">앱으로 이동 중입니다...</p>
+    <div class="spinner" id="spinner"></div>
+
+    <button id="openAppBtn" class="btn btn-primary" style="display: none;">앱에서 열기</button>
+
+    <p class="loading" id="status"></p>
+  </div>
+
+  <script>
+    // Supabase 인증 파라미터 추출
+    const hash = window.location.hash.substring(1);
+    const search = window.location.search.substring(1);
+    const params = new URLSearchParams(hash || search);
+
+    // 토큰 또는 코드 추출
+    const accessToken = params.get('access_token');
+    const refreshToken = params.get('refresh_token');
+    const code = params.get('code');
+    const type = params.get('type');
+    const error = params.get('error');
+    const errorDescription = params.get('error_description');
+
+    // 딥링크 스킴
+    const DEEP_LINK_SCHEME = 'io.supabase.lunaalba';
+
+    // 딥링크 URL 생성
+    let deepLink = `${DEEP_LINK_SCHEME}://email-confirm`;
+
+    if (error) {
+      deepLink += `?error=${encodeURIComponent(error)}&error_description=${encodeURIComponent(errorDescription || '')}`;
+    } else if (code) {
+      // PKCE 흐름
+      deepLink += `?code=${encodeURIComponent(code)}`;
+      if (type) deepLink += `&type=${encodeURIComponent(type)}`;
+    } else if (accessToken) {
+      // Implicit 흐름
+      deepLink += `?access_token=${encodeURIComponent(accessToken)}`;
+      if (refreshToken) deepLink += `&refresh_token=${encodeURIComponent(refreshToken)}`;
+      if (type) deepLink += `&type=${encodeURIComponent(type)}`;
+    }
+
+    const messageEl = document.getElementById('message');
+    const statusEl = document.getElementById('status');
+    const spinnerEl = document.getElementById('spinner');
+    const openAppBtn = document.getElementById('openAppBtn');
+
+    function openApp() {
+      window.location.href = deepLink;
+    }
+
+    // 버튼 클릭 이벤트
+    openAppBtn.onclick = openApp;
+
+    // 자동으로 앱 열기 시도
+    openApp();
+
+    // 2초 후에도 페이지에 있으면 버튼 표시
+    setTimeout(() => {
+      spinnerEl.style.display = 'none';
+      messageEl.textContent = '앱이 열리지 않았나요?';
+      openAppBtn.style.display = 'block';
+      statusEl.textContent = '버튼을 눌러 앱에서 인증을 완료하세요';
+    }, 2000);
+  </script>
+</body>
+</html>
