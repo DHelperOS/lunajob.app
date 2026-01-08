@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>이메일 인증 - 루나잡</title>
-  <meta name="description" content="루나잡 이메일 인증 페이지">
+  <title>이메일 인증 - 루나알바</title>
+  <meta name="description" content="루나알바 이메일 인증 페이지">
   <meta name="theme-color" content="#7033FF">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/favicon.png">
@@ -41,7 +41,6 @@
       font-weight: 600;
       color: #7033FF;
       letter-spacing: 0.5px;
-      text-transform: uppercase;
       margin-bottom: 8px;
     }
     h1 {
@@ -119,18 +118,14 @@
     }
     .divider::before { margin-right: 16px; }
     .divider::after { margin-left: 16px; }
-    .store-links {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-    }
     .store-btn {
-      flex: 1;
-      padding: 12px 16px;
+      display: block;
+      width: 100%;
+      padding: 14px 20px;
       border-radius: 12px;
       background: #f5f5f5;
       color: #333;
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 500;
       text-decoration: none;
       transition: background 0.2s;
@@ -156,10 +151,10 @@
 </head>
 <body>
   <div class="card">
-    <img src="/favicon.png" alt="루나잡" class="app-icon">
-    <div class="brand">LunaJob</div>
+    <img src="/favicon.png" alt="루나알바" class="app-icon">
+    <div class="brand">루나알바</div>
     <h1>이메일 인증</h1>
-    <p class="description" id="message">루나잡 앱으로 이동하고 있습니다.<br>잠시만 기다려주세요.</p>
+    <p class="description" id="message">루나알바 앱으로 이동하고 있습니다.<br>잠시만 기다려주세요.</p>
 
     <div class="loading-section" id="loadingSection">
       <div class="spinner"></div>
@@ -172,15 +167,12 @@
         <polyline points="15 3 21 3 21 9"></polyline>
         <line x1="10" y1="14" x2="21" y2="3"></line>
       </svg>
-      루나잡 앱에서 열기
+      루나알바 앱에서 열기
     </button>
 
     <div id="storeSection" class="hidden">
       <div class="divider">앱이 설치되어 있지 않나요?</div>
-      <div class="store-links">
-        <a href="https://apps.apple.com/app/id6740517498" class="store-btn">App Store</a>
-        <a href="https://play.google.com/store/apps/details?id=app.lunajob" class="store-btn">Google Play</a>
-      </div>
+      <a id="storeLink" href="#" class="store-btn"></a>
     </div>
   </div>
 
@@ -220,6 +212,21 @@
     const loadingSection = document.getElementById('loadingSection');
     const openAppBtn = document.getElementById('openAppBtn');
     const storeSection = document.getElementById('storeSection');
+    const storeLink = document.getElementById('storeLink');
+
+    // 디바이스 감지
+    const ua = navigator.userAgent || navigator.vendor || window.opera;
+    const isIOS = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
+    const isAndroid = /android/i.test(ua);
+
+    // 스토어 링크 설정
+    if (isIOS) {
+      storeLink.href = 'https://apps.apple.com/app/id6740517498';
+      storeLink.textContent = 'App Store에서 다운로드';
+    } else {
+      storeLink.href = 'https://play.google.com/store/apps/details?id=app.lunajob';
+      storeLink.textContent = 'Google Play에서 다운로드';
+    }
 
     function openApp() {
       window.location.href = deepLink;
