@@ -7,7 +7,10 @@
         "paths": [
           "/post/*",
           "/community/alba-talk/*",
-          "/community/second-hand/*"
+          "/community/second-hand/*",
+          "/auth/confirm",
+          "/auth/reset-password",
+          "/auth/callback"
         ]
       }
     ]
