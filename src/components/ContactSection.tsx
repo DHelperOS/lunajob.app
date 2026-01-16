@@ -27,7 +27,7 @@ export default function ContactSection() {
                     >
                         무엇을 도와드릴까요?
                     </motion.h2>
-                    <p className="sr-only">루나알바 밤알바, 여성알바 문의 및 고객센터</p>
+                    <p className="sr-only">루나알바 야간 알바, 전문 서비스직 문의 및 고객센터</p>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}

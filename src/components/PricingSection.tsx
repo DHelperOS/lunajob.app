@@ -95,8 +95,8 @@ export default function PricingSection() {
                             transition={{ duration: 0.6 }}
                         >
                             <span className="text-primary-violet font-bold tracking-widest text-sm uppercase mb-3 block">Membership Plans</span>
-                            <h2 id="pricing-heading" className="text-3xl md:text-5xl font-black text-foreground">루나 밤알바 플랜</h2>
-                            <p className="text-muted-foreground mt-6 text-lg"><strong>야간알바</strong>, <strong>여성알바</strong>를 위한 합리적인 가격으로 최상의 효과를 경험하세요.</p>
+                            <h2 id="pricing-heading" className="text-3xl md:text-5xl font-black text-foreground">루나 야간 업무 플랜</h2>
+                            <p className="text-muted-foreground mt-6 text-lg"><strong>전문 야간 구인구직</strong>을 위한 합리적인 가격으로 최상의 효과를 경험하세요.</p>
                         </motion.div>
                     </div>
 

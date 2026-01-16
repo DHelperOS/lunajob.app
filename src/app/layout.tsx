@@ -3,13 +3,12 @@ import "./globals.css";
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://luna-job.com"),
-    title: "밤알바 | 야간알바 여성알바 구인구직 - 루나알바",
-    description: "번호 노출 없이 안전한 밤알바 플랫폼 루나알바. 야간알바, 여성알바, 여자알바 실시간 AI 매칭. 퀸알바, 온니잡, 레이디알바, 여우알바보다 확실한 선택. 지금 사전예약하세요.",
+    title: "야간 알바 | 전문 야간 구인구직 플랫폼 - 루나알바",
+    description: "번호 노출 없이 안전한 전문 야간 구인구직 플랫폼 루나알바. 저녁 파트타임, 야간 서비스직 실시간 AI 매칭. 철저한 프라이버시 보호 시스템으로 안심하고 지원하세요. 지금 사전예약 프리미엄 혜택을 확인하세요.",
     keywords: [
-        "밤알바", "야간알바", "여성알바", "여자알바",
-        "퀸알바", "온니잡", "레이디알바", "여우알바",
-        "루나알바", "고수익알바", "유흥알바", "룸알바",
-        "노래방알바", "밤알바 구인", "여성 야간알바", "안전한 밤알바"
+        "야간 알바", "저녁 파트타임", "전문 야간 구인구직", "안심 매칭 서비스",
+        "야간 일자리 플랫폼", "프라이머시 보호 구인", "전문 서비스직 모집",
+        "루나알바", "안전한 야간 업무", "저녁 알바 추천", "야간 채용 정보"
     ],
     icons: {
         icon: "/favicon.ico",
@@ -34,22 +33,22 @@ export const metadata: Metadata = {
         type: "website",
         locale: "ko_KR",
         siteName: "루나알바",
-        title: "밤알바 | 야간알바 여성알바 - 루나알바",
-        description: "번호 노출 없이 안전한 밤알바 플랫폼. 여성알바, 야간알바, 여자알바 실시간 AI 매칭.",
+        title: "야간 알바 | 전문 저녁 파트타임 구인구직 - 루나알바",
+        description: "번호 노출 없이 안전한 전문 야간 구인구직 플랫폼. 저녁 파트타임, 야간 서비스직 실시간 AI 매칭.",
         url: "https://luna-job.com",
         images: [
             {
                 url: "/app_icon_info.webp",
                 width: 1200,
                 height: 630,
-                alt: "루나알바 - 프리미엄 밤알바 여성알바 플랫폼",
+                alt: "루나알바 - 프리미엄 전문 야간 구인구직 플랫폼",
             },
         ],
     },
     twitter: {
         card: "summary_large_image",
-        title: "밤알바 | 야간알바 여성알바 - 루나알바",
-        description: "번호 노출 없이 안전한 밤알바 플랫폼. AI 매칭으로 최적의 일자리.",
+        title: "야간 알바 | 저녁 파트타임 서비스직 - 루나알바",
+        description: "번호 노출 없이 안전한 야간 일자리 플랫폼. AI 매칭으로 최적의 업무 연결.",
         images: ["/app_icon_info.webp"],
     },
     verification: {

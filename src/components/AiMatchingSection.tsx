@@ -32,10 +32,10 @@ export default function AiMatchingSection() {
                         transition={{ delay: 0.1 }}
                         className="text-3xl md:text-5xl font-black text-foreground mb-6"
                     >
-                        나한테 딱 맞는 <strong>밤알바</strong>,<br />
+                        나한테 딱 맞는 <strong>야간 업무</strong>,<br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-primary-violet">AI가 찾아줄게요.</span>
                     </motion.h2>
-                    <p className="sr-only">AI 기반 여성알바, 야간알바, 여자알바 매칭 시스템</p>
+                    <p className="sr-only">AI 기반 야간 서비스직, 저녁 파트타임 매칭 시스템</p>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -72,8 +72,8 @@ export default function AiMatchingSection() {
 
                             <div className="space-y-2">
                                 <div className="flex gap-2 text-xs text-white/60">
-                                    <span className="bg-white/5 px-2 py-1 rounded">강남구</span>
-                                    <span className="bg-white/5 px-2 py-1 rounded">시급 2.5만</span>
+                                    <span className="bg-white/5 px-2 py-1 rounded">서울 강남구</span>
+                                    <span className="bg-white/5 px-2 py-1 rounded">급여 협의</span>
                                 </div>
                                 <div className="flex justify-between items-center mt-4">
                                     <div className="w-10 h-10 rounded-full border border-red-500/50 flex items-center justify-center text-red-500">✕</div>
@@ -95,13 +95,13 @@ export default function AiMatchingSection() {
                         viewport={{ once: true }}
                     >
                         <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
-                            밤알바 찾지 마세요.<br />
+                            야간 구인구직 찾지 마세요.<br />
                             <span className="text-primary-violet">AI가 찾아드릴게요.</span>
                         </h3>
                         <p className="text-muted-foreground mb-8 text-lg">
                             수백 개 공고를 일일이 볼 필요 없어요.<br />
                             Gemini 3.0이 당신의 조건을 분석해서<br />
-                            딱 맞는 일자리만 골라 <strong>매일 아침 5장</strong>씩 보내드려요.
+                            딱 맞는 업무만 골라 <strong>매일 아침 5장</strong>씩 보내드려요.
                         </p>
 
                         <div className="space-y-4">
@@ -111,7 +111,7 @@ export default function AiMatchingSection() {
                                 </div>
                                 <div>
                                     <h4 className="font-bold text-foreground text-sm">Gemini 3.0 정밀 분석</h4>
-                                    <p className="text-xs text-muted-foreground">단순 키워드가 아닌 성향과 스킬까지 분석</p>
+                                    <p className="text-xs text-muted-foreground">단순 키워드가 아닌 역량과 환경까지 분석</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/10">
@@ -119,7 +119,7 @@ export default function AiMatchingSection() {
                                     <HandMetal size={20} />
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-foreground text-sm">스와이프로 1초 지원</h4>
+                                    <h4 className="font-bold text-foreground text-sm">스와이프로 간편 지원</h4>
                                     <p className="text-xs text-muted-foreground">마음에 들면 오른쪽, 아니면 왼쪽. 끝.</p>
                                 </div>
                             </div>
@@ -130,10 +130,10 @@ export default function AiMatchingSection() {
                 {/* Analysis Factors & Benefits Grid */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
                     {[
-                        { icon: MapPin, label: "선호 지역 & 거리", color: "text-red-400" },
+                        { icon: MapPin, label: "희망 지역 & 거리", color: "text-red-400" },
                         { icon: Coins, label: "희망 급여 & 조건", color: "text-yellow-400" },
-                        { icon: Clock, label: "가능 시간 & 요일", color: "text-green-400" },
-                        { icon: CheckCircle2, label: "업종 경험 & 스킬", color: "text-blue-400" },
+                        { icon: Clock, label: "근무 시간 & 요일", color: "text-green-400" },
+                        { icon: CheckCircle2, label: "관련 경험 & 역량", color: "text-blue-400" },
                     ].map((item, i) => (
                         <motion.div
                             key={i}
@@ -153,28 +153,28 @@ export default function AiMatchingSection() {
                 <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                     <div className="bg-gradient-to-br from-white/5 to-transparent border border-white/10 p-8 rounded-3xl">
                         <h4 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
-                            👩‍💼 밤알바 구직자 (알바님)
+                            👩‍💼 야간 업무 지원자 (파트너님)
                         </h4>
                         <p className="text-muted-foreground text-sm mb-4">
-                            "내 조건에 맞는 알바 어딨지?" 고민 끝!
+                            "내 조건에 맞는 업무 어딨지?" 고민 끝!
                         </p>
                         <ul className="text-xs text-foreground/70 space-y-2">
-                            <li>✓ 희망 업종/지역/시급 설정</li>
+                            <li>✓ 희망 분야/지역/급여 설정</li>
                             <li>✓ 매일 아침 맞춤 공고 배달</li>
-                            <li>✓ 놓칠 수 없는 기회 알림</li>
+                            <li>✓ 최적의 매칭 기회 알림</li>
                         </ul>
                     </div>
                     <div className="bg-gradient-to-br from-white/5 to-transparent border border-white/10 p-8 rounded-3xl">
                         <h4 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
-                            👨‍💼 밤알바 구인자 (사장님)
+                            👨‍💼 야간 업무 운영진 (매니저님)
                         </h4>
                         <p className="text-muted-foreground text-sm mb-4">
-                            "우리 가게랑 딱 맞는 사람 없나?" 고민 끝!
+                            "우리 지점과 딱 맞는 동료 없나?" 고민 끝!
                         </p>
                         <ul className="text-xs text-foreground/70 space-y-2">
-                            <li>✓ 채용 공고만 올려두면 OK</li>
+                            <li>✓ 채용 정보만 등록하면 OK</li>
                             <li>✓ AI가 딱 맞는 인재 자동 추천</li>
-                            <li>✓ 스와이프로 찜하고 바로 연락</li>
+                            <li>✓ 스와이프로 확인하고 바로 소통</li>
                         </ul>
                     </div>
                 </div>

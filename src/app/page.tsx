@@ -19,13 +19,13 @@ export default function Home() {
             <Navbar />
             <Hero />
             <PrivacySection />
-            <AppShowcase />
-            <EventSection />
+            {/* <AppShowcase /> */}
+            {/* <EventSection /> */}
             <FeatureSection />
             <CommunitySection />
             <TrustSection />
             <AiMatchingSection />
-            <PricingSection />
+            {/* <PricingSection /> */}
             <ContactSection />
             <Footer />
             <Fab />

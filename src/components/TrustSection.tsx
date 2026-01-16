@@ -29,9 +29,9 @@ export default function TrustSection() {
                         transition={{ delay: 0.1 }}
                         className="text-3xl md:text-5xl font-black text-foreground mb-6 break-keep"
                     >
-                        <strong>밤알바</strong>, 프로필 사진만<br />보고 믿을 수 있나요?
+                        <strong>야간 업무</strong>, 프로필 사진만<br />보고 믿을 수 있나요?
                     </motion.h2>
-                    <p className="sr-only">안전한 여성알바, 야간알바를 위한 신뢰도 검증 시스템</p>
+                    <p className="sr-only">안전한 전문 서비스직, 저녁 파트타임을 위한 신뢰도 검증 시스템</p>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -84,15 +84,15 @@ export default function TrustSection() {
                                 <UserCheck size={24} />
                             </div>
                             <div>
-                                <h3 className="text-xl font-bold text-foreground">밤알바 구직자 (알바님)</h3>
+                                <h3 className="text-xl font-bold text-foreground">야간 업무 지원자 (파트너님)</h3>
                                 <p className="text-xs text-muted-foreground">꾸준히 활동할수록 신뢰도 UP!</p>
                             </div>
                         </div>
                         <ul className="space-y-3">
                             {[
-                                "성인인증 및 프로필 100% 채우기",
-                                "매칭 조건 설정 및 매일 앱 접속",
-                                "공고 지원 후 성실하게 채팅 응답",
+                                "본인인증 및 프로필 100% 채우기",
+                                "희망 조건 설정 및 정기적 접속",
+                                "공고 지원 후 성실하게 소통",
                                 "비매너 신고 없이 건전한 활동"
                             ].map((item, i) => (
                                 <li key={i} className="flex items-start gap-3 text-sm text-foreground/80">
@@ -115,14 +115,14 @@ export default function TrustSection() {
                                 <Briefcase size={24} />
                             </div>
                             <div>
-                                <h3 className="text-xl font-bold text-foreground">밤알바 구인자 (사장님)</h3>
-                                <p className="text-xs text-muted-foreground">신뢰도 높은 사장님은 지원율 UP!</p>
+                                <h3 className="text-xl font-bold text-foreground">야간 업무 매니저 (지점장님)</h3>
+                                <p className="text-xs text-muted-foreground">신뢰도 높은 운영진은 지원율 UP!</p>
                             </div>
                         </div>
                         <ul className="space-y-3">
                             {[
-                                "사업자 등록 인증 완료하기",
-                                "기업 정보 상세하게 작성하기",
+                                "사업자 정보 인증 완료하기",
+                                "지점 정보 상세하게 작성하기",
                                 "지원자에게 친절하고 빠른 응답",
                                 "프리미엄 서비스 이용 및 검증"
                             ].map((item, i) => (

@@ -17,10 +17,10 @@ export default function PrivacySection() {
                             transition={{ duration: 0.5 }}
                             className="text-4xl md:text-6xl font-black text-foreground leading-tight mb-6 break-keep"
                         >
-                            번호 없이 안전한 <span className="text-primary-violet">밤알바</span>.<br />
+                            번호 없이 안전한 <span className="text-primary-violet">야간 업무 지원</span>.<br />
                             <span className="text-[#EC4899]">Safe Night Job.</span>
                         </motion.h2>
-                        <p className="sr-only">여성알바, 야간알바, 여자알바를 위한 안전한 프라이버시 보호 시스템</p>
+                        <p className="sr-only">저녁 파트타임, 야간 서비스직, 전문 야간 업무를 위한 안전한 프라이버시 보호 시스템</p>
 
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
@@ -30,7 +30,7 @@ export default function PrivacySection() {
                             className="text-muted-foreground text-lg mb-12 leading-relaxed"
                         >
                             <p>개인정보 노출 걱정 없이 채용 문의를 해보세요.</p>
-                            <p>'찔러보기'와 '1:1 채팅'으로 안전한 소통이 가능합니다.</p>
+                            <p>'간편 지원'과 '1:1 채팅'으로 안전한 소통이 가능합니다.</p>
                         </motion.div>
 
                         <div className="space-y-4">
@@ -46,7 +46,7 @@ export default function PrivacySection() {
                                     🤫
                                 </div>
                                 <div>
-                                    <h4 className="text-foreground font-bold text-lg break-keep">전화번호 미공개 밤알바</h4>
+                                    <h4 className="text-foreground font-bold text-lg break-keep">전화번호 미공개 안심 지원</h4>
                                     <p className="text-sm text-muted-foreground">안심번호조차 필요 없는 완벽한 익명성</p>
                                 </div>
                             </motion.div>
@@ -63,8 +63,8 @@ export default function PrivacySection() {
                                     👋
                                 </div>
                                 <div>
-                                    <h4 className="text-foreground font-bold text-lg break-keep">밤알바 찔러보기 기능</h4>
-                                    <p className="text-sm text-muted-foreground">부담 없이 '찔러보기'로 의사 표현</p>
+                                    <h4 className="text-foreground font-bold text-lg break-keep">간편 지원 기능</h4>
+                                    <p className="text-sm text-muted-foreground">부담 없이 '간편 지원'으로 의사 표현</p>
                                 </div>
                             </motion.div>
                         </div>
@@ -124,7 +124,7 @@ export default function PrivacySection() {
                                     className="bg-[#2D3748] p-3 rounded-lg self-start flex items-center gap-2 mt-4"
                                 >
                                     <span className="text-xl">👋</span>
-                                    <span className="text-[#F472B6] font-bold text-sm">찔러보기 도착!</span>
+                                    <span className="text-[#F472B6] font-bold text-sm">간편 지원 도착!</span>
                                 </motion.div>
 
                                 {/* Input Area Mock */}

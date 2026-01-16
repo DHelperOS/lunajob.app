@@ -14,9 +14,9 @@ export default function EventSection() {
                 <header className="text-center mb-16">
                     <span className="text-primary-pink font-bold tracking-widest text-sm uppercase mb-2 block">그랜드 오프닝 이벤트</span>
                     <h2 id="events-heading" className="text-3xl md:text-5xl font-black text-foreground mb-4">
-                        총 <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">20만 포인트</span> 혜택의 기회
+                        총 <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">특별</span> 혜택의 기회
                     </h2>
-                    <p className="text-muted-foreground"><strong>밤알바</strong>, <strong>여성알바</strong> 사전 예약자 전원에게 쏟아지는 압도적 혜택을 놓치지 마세요.</p>
+                    <p className="text-muted-foreground"><strong>야간 업무</strong>, <strong>전문 서비스직</strong> 사전 예약자 전원에게 쏟아지는 압도적 혜택을 놓치지 마세요.</p>
                 </header>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">

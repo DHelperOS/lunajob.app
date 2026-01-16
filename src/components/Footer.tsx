@@ -12,7 +12,7 @@ export default function Footer() {
                             <h3 className="text-xl font-black text-foreground">루나알바</h3>
                         </div>
                         <p className="text-muted-foreground text-sm">
-                            Anywhere, Anytime. 완벽한 프리미엄 밤알바 구인구직 플랫폼.
+                            Anywhere, Anytime. 완벽한 프리미엄 전문 야간 구인구직 플랫폼.
                         </p>
                     </div>
 
@@ -20,7 +20,7 @@ export default function Footer() {
 
                 <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-xs text-muted-foreground opacity-60">
                     <div>
-                        <p className="font-bold mb-2">밤컴퍼니(Bam Company) | 대표: 윤미나</p>
+                        <p className="font-bold mb-2">루나 컴퍼니(Luna Company) | 대표: 윤미나</p>
                         <p>사업자 등록번호: 611-48-01140 | 직업정보제공사업 신고번호: J1511020250008</p>
                         <p>주소: 경기도 수원시 권선구 경수대로 384번길 60</p>
                     </div>
@@ -31,12 +31,12 @@ export default function Footer() {
                         <p>
                             고객센터: <a href="tel:070-8998-1228" className="hover:text-foreground transition-colors">070-8998-1228</a>
                         </p>
-                        <p className="mt-2">&copy; {new Date().getFullYear()} Bam Company. All rights reserved.</p>
+                        <p className="mt-2">&copy; {new Date().getFullYear()} Luna Company. All rights reserved.</p>
                     </div>
                 </div>
                 <div className="mt-8 pt-4 border-t border-dashed border-white/5 opacity-30 text-[10px] text-muted-foreground hidden md:block select-none">
                     <p>
-                        루나알바는 여성알바, 고수익알바, 밤알바 구인구직 서비스를 제공합니다. 퀸알바, 여우알바, 레이디알바, 온니잡 등 기존 플랫폼의 불편함을 해소하고
+                        루나알바는 전문 야간 구인구직 서비스를 제공합니다. 기존 플랫폼의 불편함을 해소하고
                         가장 안전하고 프라이빗한 프리미엄 일자리 정보를 제공하는 대한민국 대표 플랫폼입니다.
                     </p>
                 </div>
