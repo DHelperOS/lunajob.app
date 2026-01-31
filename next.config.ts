@@ -28,6 +28,11 @@ const nextConfig: NextConfig = {
         destination: "/redirect.html?type=second-hand&id=:id",
         permanent: false,
       },
+      {
+        source: "/community/business-promotion/:id",
+        destination: "/redirect.html?type=business-promotion&id=:id",
+        permanent: false,
+      },
     ];
   },
 };
