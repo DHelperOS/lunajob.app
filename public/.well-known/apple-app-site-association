@@ -8,6 +8,7 @@
           "/post/*",
           "/community/alba-talk/*",
           "/community/second-hand/*",
+          "/community/business-promotion/*",
           "/auth/confirm",
           "/auth/reset-password",
           "/auth/callback"
