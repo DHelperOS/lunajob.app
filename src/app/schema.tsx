@@ -22,7 +22,7 @@ export function LunaAlbaSchema() {
                     "height": 630
                 },
                 "sameAs": [
-                    "https://apps.apple.com/app/id6756914273",
+                    "https://apps.apple.com/kr/app/%EB%A3%A8%EB%82%98%EC%95%8C%EB%B0%94/id6756914273",
                     "https://play.google.com/store/apps/details?id=app.lunajob"
                 ],
                 "contactPoint": {

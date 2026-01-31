@@ -57,7 +57,7 @@ export default function Hero() {
                     className="p-8 rounded-[2.5rem] bg-white/80 dark:bg-black/40 border border-black/5 dark:border-white/10 shadow-2xl backdrop-blur-xl dark:backdrop-blur-none flex flex-wrap gap-6 justify-center items-center"
                 >
                     {/* Store Badges - Simplified and removed clipping elements */}
-                    <a href="https://apps.apple.com/app/id6756914273" target="_blank" rel="noopener noreferrer" className="hover:scale-105 active:scale-95 transition-all dark:invert-0 light:brightness-95 hover:drop-shadow-[0_0_20px_rgba(139,92,246,0.3)]" aria-label="App Store에서 루나알바 전문 야간직 앱 다운로드">
+                    <a href="https://apps.apple.com/kr/app/%EB%A3%A8%EB%82%98%EC%95%8C%EB%B0%94/id6756914273" target="_blank" rel="noopener noreferrer" className="hover:scale-105 active:scale-95 transition-all dark:invert-0 light:brightness-95 hover:drop-shadow-[0_0_20px_rgba(139,92,246,0.3)]" aria-label="App Store에서 루나알바 전문 야간직 앱 다운로드">
                         <img src="/앱스토어-02.png" alt="App Store에서 루나알바 iOS 앱 다운로드 - 전문 야간 파트타임 플랫폼" className="h-[52px] w-auto" />
                     </a>
                     <a href="https://play.google.com/store/apps/details?id=app.lunajob" target="_blank" rel="noopener noreferrer" className="hover:scale-105 active:scale-95 transition-all dark:invert-0 light:brightness-95 hover:drop-shadow-[0_0_20px_rgba(139,92,246,0.3)]" aria-label="Google Play에서 루나알바 야간 업무 앱 다운로드">
