@@ -7,7 +7,8 @@
         "paths": [
           "/post/*",
           "/community/alba-talk/*",
-          "/community/second-hand/*"
+          "/community/second-hand/*",
+          "/community/business-promotion/*"
         ]
       }
     ]
